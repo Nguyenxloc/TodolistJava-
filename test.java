@@ -25,7 +25,7 @@ public class test extends JPanel{
 		
 		for(int i = 0;i<listItems1.length;i++)
 		{
-			if(listItems1[i] instanceof Taskf)//object listItems is of instanof ? 
+			if(listItems1[i] instanceof Taskf)
 			{
 				((Taskf)listItems1[i]).changeIndexf(i+1);
 				System.out.print(i);
@@ -39,12 +39,12 @@ public class test extends JPanel{
 	{
 		
 		
-		for(Component b : getComponents())// a button clear
+		for(Component b : getComponents())
 		{
-			if(b instanceof Task)// a is of class Task
+			if(b instanceof Task)
 			{
-				if(((Task)b).getState())/// if true -> remove
-				{////get state of task if task done --> remove->
+				if(((Task)b).getState())
+				{
 					remove(b);
 					
 					

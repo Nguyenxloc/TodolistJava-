@@ -28,7 +28,7 @@ public class List extends JPanel{
 		
 		for(int i = 0;i<listItems.length;i++)
 		{
-			if(listItems[i] instanceof Task)//object listItems is of instanof ? 
+			if(listItems[i] instanceof Task)
 			{
 				((Task)listItems[i]).changeIndex(i+1);
 				
@@ -41,12 +41,12 @@ public class List extends JPanel{
 	{	
 		
 		
-		for(Component a : getComponents())// a: Task
+		for(Component a : getComponents())
 		{
-			if(a instanceof Task)// a is of class Task
+			if(a instanceof Task)
 			{
-				if(((Task)a).getState())/// if true -> remove
-				{////get state of task if task done --> remove->
+				if(((Task)a).getState())
+				{
 			
 					remove(a);
 					
@@ -63,16 +63,12 @@ public class List extends JPanel{
 	{	
 		
 		
- 		for(Component a : getComponents())// loop each data task 1 2 3
+ 		for(Component a : getComponents())
 		{
-			if(a instanceof Task)// a is of class Task
+			if(a instanceof Task)
 			{
-				if(((Task)a).getState())/// if true -> remove
-				{////get state of task if task done --> remove->
-					
-				    
-					
-					
+				if(((Task)a).getState())
+				{
 					
 					updateNumbers();
 					

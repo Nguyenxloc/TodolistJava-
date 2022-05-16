@@ -10,38 +10,28 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 
-public class AppFrame extends JFrame{ /// 
+public class AppFrame extends JFrame{ 
 	
 	private TitleBar title;
 	private Footer footer;
 	private List list;
 	private JButton newTask;
-	
 	private JButton memorize;
 	private test test1;
 	AppFrame()
 	{
-		this.setSize(800,700);/// set size for window application
+		this.setSize(800,700);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		
-		
 		title = new TitleBar();
 		footer = new Footer();
 		list = new List();
 		test1 = new test();
-		
 		this.add(title,BorderLayout.NORTH);
-		
 		this.add(footer,BorderLayout.SOUTH);
 		this.add(list,BorderLayout.WEST);
-		
-		
-		newTask = footer.getNewTask();//create button to add func() from footer
-		
+		newTask = footer.getNewTask();
 		memorize= footer.getmemorize();
-		this.setVisible(true);/// if true display code output
-		
+		this.setVisible(true);
 		addListeners();
 		}
 		public void memtaskdone() {
@@ -57,14 +47,14 @@ public class AppFrame extends JFrame{ ///
 		}
 		
 
-		public void addListeners()// method listener
+		public void addListeners()
 		{
-			newTask.addMouseListener(new MouseAdapter()//add listener in newTask button
+			newTask.addMouseListener(new MouseAdapter()
 			{
 				@override
 				public void mousePressed(MouseEvent e)
 				{	
-					Task task = new Task();/// because class task() used in class List()	
+					Task task = new Task();	
 					list.add(task);		
 					
 					list.updateNumbers();					
@@ -74,16 +64,20 @@ public class AppFrame extends JFrame{ ///
 						public void mousePressed(MouseEvent e)
 						{
 							if(e.getClickCount()==2){
-							Taskf taskf =new Taskf();	
-							test1.updateNumbers1();
-						
-							task.changeState();
-							list.updateNumbers();						
+							Taskf taskf =new Taskf();						
+							task.changeState();						
 							taskf.changeStatef();
 							test1.add(taskf);
 							test1.setLayout(null);
 							revalidate();
 						}
+							if(e.getClickCount()==2){
+								Taskf taskf =new Taskf();	
+								test1.updateNumbers1();																				
+								revalidate();
+							}
+							
+							
 						}
 					});
 				}

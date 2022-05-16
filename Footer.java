@@ -26,19 +26,13 @@ public class Footer extends JPanel{
 		addTask.setBorder(emptyBorder);
 		addTask.setFont(new Font("Sans-serif",Font.PLAIN, 20));
 		addTask.setVerticalAlignment(JButton.BOTTOM);
-		//addTask.setBackground(Color.white);
+		
 		this.add(addTask);
-		
-		
-		
-		
-		this.add(Box.createHorizontalStrut(20));//Space between buttons
-		memorize = new JButton("memorize");
-		memorize.setFont(new Font("Sans-serif",Font.PLAIN, 20));// set font for button
+		this.add(Box.createHorizontalStrut(20));
+		memorize = new JButton("Memorize");
+		memorize.setFont(new Font("Sans-serif",Font.PLAIN, 20));
 		memorize.setBorder(emptyBorder);
-		//clear.setBackground();
-		this.add(memorize);
-		
+		this.add(memorize);	
 	}
 	
 	public JButton getNewTask(){

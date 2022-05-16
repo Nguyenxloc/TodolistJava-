@@ -18,26 +18,26 @@ public class TitleBar extends JPanel{
 	TitleBar()
 	{
 this.setPreferredSize(new Dimension(400,60));
-this.add(Box.createHorizontalStrut(35));//Space between buttons
-		textleft = new JLabel("uncomplete");
+this.add(Box.createHorizontalStrut(35));
+		textleft = new JLabel("Uncomplete");
 		textleft.setPreferredSize(new Dimension(200,60));
 		textleft.setFont(new Font("Sans-serif",Font.BOLD, 20));
 		
 		this.add(textleft);
 		
 		
-		this.add(Box.createHorizontalStrut(65));//Space between buttons
+		this.add(Box.createHorizontalStrut(65));
 		titleText = new JLabel("To Do List");
 		titleText.setPreferredSize(new Dimension(200,60));
 		titleText.setFont(new Font("Sans-serif",Font.BOLD, 20));
 		
 		this.add(titleText);
 		
-		this.add(Box.createHorizontalStrut(20));//Space between buttons
-		textright = new JLabel("complete");
+		this.add(Box.createHorizontalStrut(20));
+		textright = new JLabel("Complete");
 		textright.setPreferredSize(new Dimension(200,60));
 		textright.setFont(new Font("Sans-serif",Font.BOLD, 20));
-		//clear.setBackground();
+		
 		this.add(textright);
 		
 		
